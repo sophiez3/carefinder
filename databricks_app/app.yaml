@@ -1,0 +1,9 @@
+# Databricks Apps config for CareFinder India
+command: ["python", "-m", "server.main"]
+env:
+  # Filled in from the "sql-warehouse" resource you add when creating the app.
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+  # Where the notebook wrote its tables.
+  - name: CAREFINDER_SCHEMA
+    value: workspace.datathon

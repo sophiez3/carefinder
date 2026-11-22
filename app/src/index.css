@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-teal: #0f6e6e;
+  --color-teal-dark: #095858;
+  --color-teal-pale: #e6f4f2;
+  --color-ink: #17272b;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: 0 2px 10px rgba(23, 39, 43, 0.06);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  button,
+  a,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible {
+    outline: 3px solid rgba(15, 110, 110, 0.3);
+    outline-offset: 2px;
+  }
+}
+
+.decor-circle {
+  position: absolute;
+  border: 1px solid rgba(15, 110, 110, 0.08);
+  border-radius: 999px;
+  background: repeating-radial-gradient(circle at center, transparent 0 30px, rgba(15, 110, 110, 0.025) 31px 32px);
+}
+
+.map-grid {
+  background-image:
+    linear-gradient(31deg, transparent 42%, rgba(255,255,255,.8) 43%, rgba(255,255,255,.8) 46%, transparent 47%),
+    linear-gradient(127deg, transparent 40%, rgba(255,255,255,.7) 41%, rgba(255,255,255,.7) 45%, transparent 46%),
+    linear-gradient(rgba(15,110,110,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,110,110,.08) 1px, transparent 1px);
+  background-size: 210px 180px, 260px 230px, 44px 44px, 44px 44px;
+}
+
+.road {
+  position: absolute;
+  height: 7px;
+  border: 1px solid rgba(148, 163, 184, .4);
+  background: rgba(255,255,255,.9);
+  border-radius: 999px;
+  transform-origin: left center;
+}
+
+.road-a { width: 85%; left: 2%; top: 37%; transform: rotate(20deg); }
+.road-b { width: 75%; left: 18%; top: 78%; transform: rotate(-49deg); }
+.road-c { width: 58%; left: 34%; top: 13%; transform: rotate(83deg); }
+
+@media (max-width: 389px) {
+  .xs-tight {
+    padding-inline: 1rem;
+  }
+}

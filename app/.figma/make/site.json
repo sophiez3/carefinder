@@ -1,0 +1,10 @@
+{
+  "description": "Helps health workers and care planners find and compare hospitals by service, distance, and evidence, with clear explanations to support informed referrals.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
